@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software License Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Main Application -->
+    <div id="mainApp" class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="header-left">
+                    <h1 class="logo">
+                        <i class="fas fa-shield-alt"></i>
+                        Software License Management
+                    </h1>
+                </div>
+                <div class="header-right">
+                    <!-- No logout button needed -->
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <!-- Licensee Section -->
+                <div class="card">
+                    <h3 class="card-title">Licensee</h3>
+                    <div class="licensee-info">
+                        <p class="company-name">Ocean Software Solutions LLC</p>
+                        <p class="company-address">ISV Distribution FL</p>
+                        <p class="company-location">Florida, United States</p>
+                    </div>
+                </div>
+
+                <!-- Main Contact Section -->
+                <div class="card">
+                    <h3 class="card-title">Main Contact</h3>
+                    <div class="contact-info">
+                        <p class="contact-name">John McCormick</p>
+                        <p class="contact-email">john@mccormick.com</p>
+                    </div>
+                    <button class="btn btn-secondary btn-sm" id="changeContactBtn">
+                        <i class="fas fa-edit"></i>
+                        Change Main Contact
+                    </button>
+                </div>
+
+                <!-- Products Section -->
+                <div class="card">
+                    <h3 class="card-title">Products</h3>
+                    <div class="products-list">
+                        <div class="product-item" data-product="optimizer">
+                            <span class="product-name">Magic Optimizer</span>
+                            <span class="product-count">(1)</span>
+                        </div>
+                        <div class="product-item active" data-product="server">
+                            <span class="product-name">Magic Optimizer Server</span>
+                            <span class="product-count">(4)</span>
+                        </div>
+                        <div class="product-item" data-product="compare-merge">
+                            <span class="product-name">Magic Compare & Merge</span>
+                            <span class="product-count">(2)</span>
+                        </div>
+                        <div class="product-item" data-product="compare">
+                            <span class="product-name">Magic Compare</span>
+                            <span class="product-count">(1)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- License Provider Section -->
+                <div class="card">
+                    <h3 class="card-title">License Provider</h3>
+                    <div class="provider-info">
+                        <p class="provider-name">ISV Distribution FL</p>
+                        <p class="provider-company">Ocean Software Solutions LLC</p>
+                        <p class="provider-location">United States</p>
+                        <p class="provider-email">jj@isv-distribuition-fl.com</p>
+                        <p class="provider-phone">555-4567-1234</p>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <div class="content-area">
+                <!-- Product Header -->
+                <div class="content-header">
+                    <h2 class="product-title">Magic Optimizer Server</h2>
+                    <button class="btn btn-primary" id="requestLicenseBtn">
+                        <i class="fas fa-plus"></i>
+                        Request New License
+                    </button>
+                </div>
+
+                <!-- Licenses Table -->
+                <div class="card">
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>License</th>
+                                    <th>Maintenance Valid Until</th>
+                                    <th>Users</th>
+                                    <th>Activations</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="license-key">6789-9012-3456-1544</td>
+                                    <td>
+                                        <span class="maintenance-date">2025-07-18</span>
+                                        <button class="btn btn-secondary btn-xs">Renew</button>
+                                    </td>
+                                    <td>
+                                        <span class="user-count">10</span>
+                                        <button class="btn btn-secondary btn-xs">Add Users</button>
+                                    </td>
+                                    <td class="activation-count">2/10</td>
+                                </tr>
+                                <tr>
+                                    <td class="license-key">7890-1234-5678-9012</td>
+                                    <td>
+                                        <span class="maintenance-date">2026-01-01</span>
+                                    </td>
+                                    <td>
+                                        <span class="user-count">11</span>
+                                        <button class="btn btn-secondary btn-xs">Add Users</button>
+                                    </td>
+                                    <td class="activation-count">2/11</td>
+                                </tr>
+                                <tr>
+                                    <td class="license-key">8901-2345-6789-0103</td>
+                                    <td>
+                                        <span class="maintenance-date">2025-07-31</span>
+                                        <button class="btn btn-secondary btn-xs">Renew</button>
+                                    </td>
+                                    <td>
+                                        <span class="user-count">2</span>
+                                        <button class="btn btn-secondary btn-xs">Add Users</button>
+                                    </td>
+                                    <td class="activation-count">1/2</td>
+                                </tr>
+                                <tr>
+                                    <td class="license-key">47ae37d0af3bab494cbda</td>
+                                    <td>
+                                        <span class="maintenance-date">2026-01-01</span>
+                                    </td>
+                                    <td>
+                                        <span class="user-count">4</span>
+                                        <button class="btn btn-secondary btn-xs">Add Users</button>
+                                    </td>
+                                    <td class="activation-count">0/4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Activations Table -->
+                <div class="card">
+                    <h3 class="card-title">Activations</h3>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Computer Name</th>
+                                    <th>User Name</th>
+                                    <th>Date</th>
+                                    <th>IP</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>COMP-NAME-11</td>
+                                    <td>UserName-11</td>
+                                    <td>2012-12-03 01:42:00</td>
+                                    <td>2025-01-01 00:00:10</td>
+                                    <td>
+                                        <button class="btn btn-danger btn-xs">Revoke</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>COMP-NAME-12</td>
+                                    <td>UserName-12</td>
+                                    <td>2012-12-03 01:43:00</td>
+                                    <td>2025-01-01 00:00:11</td>
+                                    <td>
+                                        <button class="btn btn-danger btn-xs">Revoke</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Change Contact Modal -->
+    <div id="changeContactModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Change Main Contact</h3>
+                <button class="modal-close" id="closeChangeContactModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="modal-form">
+                <div class="form-group">
+                    <label for="contactName">Name</label>
+                    <input type="text" id="contactName" value="John McCormick" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">Email</label>
+                    <input type="email" id="contactEmail" value="john@mccormick.com" required>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-outline" id="cancelChangeContact">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Request License Modal -->
+    <div id="requestLicenseModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Request New License</h3>
+                <button class="modal-close" id="closeRequestLicenseModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="modal-form">
+                <div class="form-group">
+                    <label for="licenseUsers">Users</label>
+                    <input type="number" id="licenseUsers" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="licenseMessage">Additional message with request</label>
+                    <textarea id="licenseMessage" rows="4" placeholder="Enter your message here..."></textarea>
+                </div>
+                <p class="form-help">
+                    Click on "Send" button to send request to your License provider: ISV Distribution FL
+                </p>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-outline" id="cancelRequestLicense">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Renew License Modal -->
+    <div id="renewLicenseModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Renew License Maintenance</h3>
+                <button class="modal-close" id="closeRenewLicenseModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="modal-form">
+                <p class="form-info">
+                    Requesting renewal of expired maintenance for license: <strong id="renewLicenseKey">6789-9012-3456-1544</strong> (users: <span id="renewUserCount">10</span>)
+                </p>
+                <div class="form-group">
+                    <label for="renewMessage">Additional message with request</label>
+                    <textarea id="renewMessage" rows="4" placeholder="Enter your message here..."></textarea>
+                </div>
+                <p class="form-help">
+                    Click on "Send" button to send request to your License provider: ISV Distribution FL
+                </p>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-outline" id="cancelRenewLicense">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add Users Modal -->
+    <div id="addUsersModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Request Additional Users</h3>
+                <button class="modal-close" id="closeAddUsersModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="modal-form">
+                <p class="form-info">
+                    Requesting additional users to license: <strong id="addUsersLicenseKey">6789-9012-3456-1544</strong> (current users: <span id="currentUserCount">10</span>)
+                </p>
+                <div class="form-group">
+                    <label for="additionalUsers">Additional users</label>
+                    <input type="number" id="additionalUsers" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="addUsersMessage">Additional message with request</label>
+                    <textarea id="addUsersMessage" rows="4" placeholder="Enter your message here..."></textarea>
+                </div>
+                <p class="form-help">
+                    Click on "Send" button to send request to your License provider: ISV Distribution FL
+                </p>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-outline" id="cancelAddUsers">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Revoke License Modal -->
+    <div id="revokeLicenseModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Revoke License</h3>
+                <button class="modal-close" id="closeRevokeLicenseModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="modal-form">
+                <p class="form-info">
+                    Revoking a license on: <strong id="revokeComputerName">COMP-NAME-11</strong> for <strong id="revokeUserName">UserName-11</strong>.
+                </p>
+                <p class="form-warning">
+                    Please only send this revoke request, when <strong id="revokeComputerName2">COMP-NAME-11</strong> has crashed or you can't access it to revoke license through software.
+                </p>
+                <p class="form-help">
+                    Click on "Send" button to send request to your License provider: ISV Distribution FL
+                </p>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-outline" id="cancelRevokeLicense">Cancel</button>
+                    <button type="submit" class="btn btn-danger">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
